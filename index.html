@@ -2,12 +2,106 @@
 <style>
 :root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#667085;--line:#dfe4ec;--accent:#4f46e5;--accent2:#7c3aed;--good:#e7f8ed;--bad:#fdeaea;--warn:#fff5db;--blue:#eef4ff}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--ink)}header{background:#111827;color:#fff;padding:16px 20px;position:sticky;top:0;z-index:5;box-shadow:0 5px 18px #0002}.header-wrap{max-width:1250px;margin:auto;display:flex;gap:14px;justify-content:space-between;align-items:center;flex-wrap:wrap}.brand strong{font-size:20px}.brand small{display:block;color:#cbd5e1;margin-top:3px}.stats{display:flex;gap:7px;flex-wrap:wrap}.stat{background:#ffffff15;border:1px solid #ffffff26;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:800}main{max-width:1250px;margin:auto;padding:18px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 18px}button{font:inherit}.btn{border:0;border-radius:12px;padding:10px 13px;font-weight:800;cursor:pointer;background:var(--accent);color:white}.btn.secondary{background:white;color:#344054;border:1px solid var(--line)}.btn.success{background:#166534}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 22px #1018280c;padding:18px}.shift-banner{display:grid;grid-template-columns:1.5fr 1fr;gap:14px;margin-bottom:16px}.shift-banner h1{margin:0 0 8px;font-size:clamp(28px,4vw,44px)}.shift-banner p{margin:4px 0;color:var(--muted);line-height:1.5}.decision{background:var(--blue);border:1px solid #c7d7fe;border-radius:14px;padding:13px;font-size:13px;line-height:1.45}.board{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.room{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;cursor:pointer;transition:.15s;position:relative;min-height:190px}.room:hover{transform:translateY(-2px);box-shadow:0 9px 20px #00000010;border-color:#b8baf4}.room.done{border-color:#86efac;background:#f7fff9}.room.alert{border-color:#fdba74;background:#fffaf3}.room-top{display:flex;justify-content:space-between;gap:8px;align-items:center}.room-num{font-size:13px;font-weight:900;color:#4338ca}.room .chief{font-size:17px;font-weight:900;margin:8px 0 4px}.room .meta{font-size:12px;color:var(--muted)}.room .handoff{font-size:13px;line-height:1.4;margin:10px 0;color:#344054}.badge{display:inline-flex;border-radius:999px;background:#eef2ff;color:#4338ca;padding:5px 8px;font-size:11px;font-weight:900}.badge.alert{background:#fff0e1;color:#9a3412}.progress{height:8px;border-radius:999px;background:#e5e7eb;overflow:hidden;margin-top:10px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0}.hidden{display:none!important}.patient-layout{display:grid;grid-template-columns:360px 1fr;gap:14px;align-items:start}.side{position:sticky;top:92px}.side h2{margin:4px 0}.kv{display:grid;grid-template-columns:105px 1fr;gap:6px;font-size:13px;border-top:1px solid var(--line);padding-top:10px;margin-top:10px}.kv b{color:#475467}.event{background:var(--warn);border:1px solid #fed7aa;padding:11px;border-radius:12px;margin-top:10px;font-size:13px;line-height:1.4}.qtag{display:inline-block;background:#eef2ff;color:#4338ca;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:900}.scenario{background:#fafbff;border-left:5px solid var(--accent);padding:14px;border-radius:12px;margin:12px 0;line-height:1.5}.qtext{font-size:21px;font-weight:900;line-height:1.35;margin:15px 0}.answers{display:grid;gap:9px}.choice{text-align:left;background:white;border:2px solid var(--line);border-radius:13px;padding:13px;cursor:pointer;font-size:15px;line-height:1.4}.choice:hover{border-color:#a5b4fc}.choice.selected{border-color:#7c3aed;background:#f5f3ff}.choice.correct{background:var(--good);border-color:#65a30d}.choice.wrong{background:var(--bad);border-color:#dc2626}.choice:disabled{cursor:default}.feedback{display:none;margin-top:15px;border:1px solid var(--line);border-radius:14px;padding:15px;background:#fbfcfe;line-height:1.48}.feedback.show{display:block}.ratbox{border-top:1px solid var(--line);padding-top:10px;margin-top:10px}.path{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:10px;margin-top:10px;font-size:13px}.option-review{margin-top:8px;font-size:13px;padding:8px;border-radius:10px;background:#f8fafc}.qactions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:15px}.review-grid{display:grid;gap:8px}.missed-item{border:1px solid var(--line);border-radius:12px;padding:11px;background:white}.weak{display:flex;gap:7px;flex-wrap:wrap}.weak span{background:#fee2e2;border-radius:999px;padding:5px 8px;font-size:12px;font-weight:800}.sbar-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}textarea{width:100%;min-height:95px;border:1px solid var(--line);border-radius:10px;padding:10px;font:inherit}.challenge-card{background:linear-gradient(135deg,#111827,#312e81);color:white;border-radius:18px;padding:20px;margin:16px 0}.challenge-card p{color:#dbeafe}.footer-note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.5}@media(max-width:1000px){.board{grid-template-columns:repeat(2,minmax(0,1fr))}.patient-layout{grid-template-columns:1fr}.side{position:static}.shift-banner{grid-template-columns:1fr}}@media(max-width:620px){main{padding:12px}.board{grid-template-columns:1fr}.sbar-grid{grid-template-columns:1fr}header{position:static}.qtext{font-size:18px}}
+
+.match-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.match-col{border:2px dashed #c7d2fe;border-radius:16px;padding:14px;background:#fafaff;min-height:240px}
+.match-col h3{margin:0 0 5px}.match-col p{margin:0 0 12px;color:#667085;font-size:13px}
+.match-bank{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.match-chip{border:2px solid #dfe4ec;background:#fff;border-radius:999px;padding:9px 12px;font-weight:750;cursor:pointer;font-size:13px}
+.match-chip:hover{border-color:#818cf8}.match-chip.active{border-color:#7c3aed;background:#f5f3ff}
+.match-item{border:1px solid #dfe4ec;border-radius:12px;background:white;padding:9px 10px;margin:7px 0;font-size:13px;cursor:pointer}
+.match-item.good{background:#ecfdf3;border-color:#86efac}.match-item.bad{background:#fef2f2;border-color:#fca5a5}
+.match-explain{font-size:12px;color:#475467;margin-top:5px;line-height:1.4}
+@media(max-width:700px){.match-wrap{grid-template-columns:1fr}}
+
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:14px 0}
+.feature-card{background:#fff;border:1px solid #dfe4ec;border-radius:16px;padding:15px;cursor:pointer;transition:.15s}
+.feature-card:hover{transform:translateY(-2px);border-color:#818cf8;box-shadow:0 8px 18px #0001}
+.feature-card h3{margin:0 0 6px}.feature-card p{margin:0;color:#667085;font-size:13px;line-height:1.45}
+.lab-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.lab-value{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px}
+.lab-value .big{font-size:26px;font-weight:900}.lab-value small{color:#667085}
+.step-card{border:1px solid #dfe4ec;border-radius:14px;padding:14px;margin:10px 0;background:#fff}
+.step-card h3{margin:0 0 8px;font-size:17px}.step-card.locked{opacity:.55}
+.mini-choice{display:block;width:100%;text-align:left;border:1px solid #dfe4ec;background:#fff;border-radius:10px;padding:10px;margin:7px 0;cursor:pointer}
+.mini-choice:hover{border-color:#818cf8}.mini-choice.pick{background:#eef2ff;border-color:#6366f1}.mini-choice.ok{background:#ecfdf3;border-color:#22c55e}.mini-choice.no{background:#fef2f2;border-color:#ef4444}
+.calc-row{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;align-items:end}
+.calc-row input{width:100%;border:1px solid #dfe4ec;border-radius:10px;padding:10px;font:inherit}
+.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f8fafc;border:1px solid #e2e8f0;padding:9px;border-radius:10px}
+.match-hub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.match-topic{border:1px solid #dfe4ec;border-radius:15px;padding:14px;background:#fff;cursor:pointer}
+.match-topic:hover{border-color:#818cf8}
+.match-board{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:14px}
+.match-zone{border:2px dashed #c7d2fe;border-radius:14px;padding:12px;min-height:180px;background:#fafaff}
+.match-bank2{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.match-token{border:1px solid #cbd5e1;border-radius:999px;background:#fff;padding:8px 11px;cursor:pointer;font-size:13px}
+.match-token.sel{background:#ede9fe;border-color:#7c3aed}
+.match-placed{border:1px solid #dfe4ec;border-radius:10px;padding:8px;margin:6px 0;background:#fff;font-size:13px}
+.match-placed.ok{background:#ecfdf3;border-color:#86efac}.match-placed.no{background:#fef2f2;border-color:#fca5a5}
+.reset-danger{background:#b91c1c!important}
+.share-note{background:#ecfeff;border:1px solid #a5f3fc;border-radius:12px;padding:11px;font-size:13px;line-height:1.45}
+@media(max-width:700px){.lab-grid,.calc-row{grid-template-columns:1fr}}
 </style></head><body>
-<header><div class="header-wrap"><div class="brand"><strong>🫁 Oxygenation Floor Simulation</strong><span style="font-size:10px;color:#94a3b8;margin-left:8px">GitHub Pages build v2.1</span><small id="clock">0700 • Day Shift</small></div><div class="stats"><div class="stat" id="scoreStat">0 correct / 0 answered</div><div class="stat" id="floorStat">0/16 rooms started</div><div class="stat" id="missStat">0 missed</div></div></div></header>
+<header><div class="header-wrap"><div class="brand"><strong>🫁 Oxygenation Floor Simulation</strong><span style="font-size:10px;color:#94a3b8;margin-left:8px">GitHub Pages build v2.3</span><small id="clock">0700 • Day Shift</small></div><div class="stats"><div class="stat" id="scoreStat">0 correct / 0 answered</div><div class="stat" id="floorStat">0/16 rooms started</div><div class="stat" id="missStat">0 missed</div></div></div></header>
 <main>
-<section id="boardView"><div class="shift-banner"><div class="card"><h1>0700 — You have 16 patients.</h1><p>Start from report, choose a room, and manage the assignment. Diagnoses are intentionally hidden when recognition from cues is part of the learning goal. Patients change during the shift.</p><div class="toolbar"><button class="btn" onclick="openPriority()">Who do I see first?</button><button class="btn secondary" onclick="openReview()">Review Missed</button><button class="btn secondary" onclick="showMedRoster()">Medication Roster</button></div></div><div class="decision"><b>Priority filter</b><br>1. Immediate ABC threat?<br>2. Acute/new/unexpected?<br>3. Deteriorating trend?<br>4. Actual problem vs risk?<br>5. Harm if delayed?<br>6. What can safely wait?</div></div><div class="board" id="board"></div><div class="challenge-card"><h2>🌙 End-of-Shift Challenge</h2><p>25 advanced questions on competing priorities, delegation, CJMM, AAPIE, medication safety, reassessment, changing conditions, and SBAR.</p><button class="btn success" onclick="startAdvanced()">Start 25-question challenge →</button></div><div class="footer-note">Course-study simulation only. Use current institutional policy and clinical references in real patient care.</div></section>
+<section id="boardView"><div class="shift-banner"><div class="card"><h1>0700 — You have 16 patients.</h1><p>Start from report, choose a room, and manage the assignment. Diagnoses are intentionally hidden when recognition from cues is part of the learning goal. Patients change during the shift.</p><div class="share-note"><b>Shareable class link:</b> Each learner has their own history on their own device/browser. Progress is stored locally in that browser, not in GitHub. <b>Reset My Board</b> clears only that browser’s history.</div><div class="toolbar">
+<button class="btn" onclick="openPriority()">Who do I see first?</button>
+<button class="btn secondary" onclick="openCompareHub()">Matching & Comparison</button>
+<button class="btn secondary" onclick="openABGLab()">ABG + MAP Lab</button>
+<button class="btn secondary" onclick="openCJMMCases()">CJMM Case Lab</button>
+<button class="btn secondary" onclick="openReview()">Review Missed</button>
+<button class="btn secondary" onclick="showMedRoster()">Medication Roster</button>
+<button class="btn reset-danger" onclick="resetMyBoard()">Reset My Board</button>
+</div></div><div class="decision"><b>Priority filter</b><br>1. Immediate ABC threat?<br>2. Acute/new/unexpected?<br>3. Deteriorating trend?<br>4. Actual problem vs risk?<br>5. Harm if delayed?<br>6. What can safely wait?</div></div><div class="board" id="board"></div><div class="challenge-card"><h2>🌙 End-of-Shift Challenge</h2><p>25 advanced questions on competing priorities, delegation, CJMM, AAPIE, medication safety, reassessment, changing conditions, and SBAR.</p><button class="btn success" onclick="startAdvanced()">Start 25-question challenge →</button></div><div class="footer-note">Course-study simulation only. Use current institutional policy and clinical references in real patient care.</div></section>
 <section id="patientView" class="hidden"><div class="toolbar"><button class="btn secondary" onclick="showBoard()">← Back to floor</button><button class="btn secondary" onclick="openReview()">Review Missed</button></div><div class="patient-layout"><aside class="card side" id="patientCard"></aside><section class="card" id="questionCard"><div class="qtag" id="qtag"></div><h2 id="qtitle"></h2><div class="scenario" id="scenario"></div><div class="qtext" id="qtext"></div><div id="formatHint" style="font-size:12px;color:#667085;margin-bottom:9px"></div><div class="answers" id="answers"></div><div id="sbarBox" class="hidden"></div><button id="submitBtn" class="btn hidden" style="margin-top:12px"></button><div id="feedback" class="feedback"></div><div class="qactions"><button class="btn secondary" onclick="showBoard()">Change room</button><button id="nextBtn" class="btn hidden" onclick="nextQuestion()">Next question →</button></div></section></div></section>
 <section id="reviewView" class="hidden"><div class="toolbar"><button class="btn secondary" onclick="showBoard()">← Back to floor</button></div><div class="card"><h2>Review Missed Questions</h2><p style="color:#667085">Missed questions are tracked by topic. Replaying randomizes answer order again.</p><div id="weakAreas" class="weak"></div><div id="missedList" class="review-grid" style="margin-top:12px"></div><button class="btn" id="reviewStart" onclick="startMissedReview()" style="margin-top:12px">Replay missed questions</button></div></section>
+
+<section id="matchView" class="hidden">
+<div class="toolbar"><button class="btn secondary" onclick="showBoard()">← Back to floor</button><button class="btn secondary" onclick="resetCOPDMatch()">Reset matching</button></div>
+<div class="card">
+<div class="qtag">COPD Compare • Lecture Matching</div>
+<h2>Chronic Bronchitis vs Emphysema</h2>
+<p style="color:#667085;line-height:1.5">Select a finding, then choose the disease it belongs with. After you submit, each item explains <b>why</b> it fits that COPD pattern.</p>
+<div class="decision"><b>Big picture first:</b><br><b>Chronic bronchitis = BRONCHI + MUCUS.</b> Inflamed, narrowed airway tubes with excess secretions.<br><b>Emphysema = ALVEOLI + DESTRUCTION.</b> Loss of alveolar walls/support causes dead space, air trapping, and hyperinflation.</div>
+<div id="matchBank" class="match-bank"></div>
+<div class="match-wrap">
+<div class="match-col" onclick="placeMatch('bronchitis')"><h3>🫧 Chronic Bronchitis</h3><p>Classic lecture label: “Blue Bloater”</p><div id="bronchitisBin"></div></div>
+<div class="match-col" onclick="placeMatch('emphysema')"><h3>🎈 Emphysema</h3><p>Classic lecture label: “Pink Puffer”</p><div id="emphysemaBin"></div></div>
+</div>
+<div class="toolbar"><button class="btn" onclick="gradeCOPDMatch()">Check Matches</button></div>
+<div id="matchFeedback" class="feedback"></div>
+</div>
+</section>
+
+
+<section id="compareHubView" class="hidden">
+<div class="toolbar"><button class="btn secondary" onclick="showBoard()">← Back to floor</button></div>
+<div class="card">
+<div class="qtag">Lecture Comparisons</div><h2>Matching & Comparison Center</h2>
+<p style="color:#667085">Use matching when the exam is testing how to tell similar respiratory concepts apart.</p>
+<div id="compareTopics" class="match-hub"></div>
+</div></section>
+
+<section id="genericMatchView" class="hidden">
+<div class="toolbar"><button class="btn secondary" onclick="openCompareHub()">← All comparisons</button><button class="btn secondary" onclick="resetGenericMatch()">Reset this match</button></div>
+<div class="card"><div class="qtag">Matching</div><h2 id="gmTitle"></h2><p id="gmIntro" style="color:#667085"></p>
+<div id="gmBank" class="match-bank2"></div><div id="gmZones" class="match-board"></div>
+<div class="toolbar"><button class="btn" onclick="gradeGenericMatch()">Check Matches</button></div>
+<div id="gmFeedback" class="feedback"></div></div></section>
+
+<section id="abgLabView" class="hidden">
+<div class="toolbar"><button class="btn secondary" onclick="showBoard()">← Back to floor</button><button class="btn secondary" onclick="newABGCase()">New ABG</button></div>
+<div class="card">
+<div class="qtag">ABG + Perfusion Lab</div><h2>What do the numbers mean—and what should I do?</h2>
+<p style="color:#667085;line-height:1.5">This lab follows your course rule: <b>no compensation this level.</b> First identify acid/base, then CO₂ vs HCO₃⁻, then look separately at PaO₂. MAP is added to connect circulation/perfusion to treatment.</p>
+<div class="decision"><b>ABG shortcut:</b> pH first → CO₂ next. If pH and CO₂ move opposite = respiratory. If CO₂ is normal, look at HCO₃⁻; pH and HCO₃⁻ move together = metabolic. <b>PaO₂ answers oxygenation, not acid/base.</b></div>
+<div id="abgCaseArea"></div>
+</div></section>
+
+<section id="cjmmCaseView" class="hidden">
+<div class="toolbar"><button class="btn secondary" onclick="showBoard()">← Back to floor</button><button class="btn secondary" onclick="openCJMMCases()">Choose another case</button></div>
+<div class="card"><div class="qtag">Homework-Style CJMM</div><h2 id="cjmmTitle">Choose a patient case</h2><div id="cjmmArea"></div></div></section>
+
 <section id="medView" class="hidden"><div class="toolbar"><button class="btn secondary" onclick="showBoard()">← Back to floor</button></div><div class="card"><h2>Medication Roster</h2><div id="medRoster" class="board"></div></div></section>
 </main>
 <script>
@@ -15,7 +109,7 @@ const PATIENTS=[{"room": "401", "age": "68 M", "display": "Fever + productive co
 function save(){localStorage.setItem('oxygenFloorState',JSON.stringify(state));updateStats()}function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}function fmtTime(min){let total=7*60+min,h=Math.floor(total/60),m=total%60;return String(h).padStart(2,'0')+String(m).padStart(2,'0')}function updateStats(){document.getElementById('scoreStat').textContent=`${state.correct} correct / ${state.answered} answered`;document.getElementById('floorStat').textContent=`${Object.keys(state.rooms).length}/16 rooms started`;document.getElementById('missStat').textContent=`${state.missed.length} missed`;document.getElementById('clock').textContent=`${fmtTime(state.shiftMinutes)} • Day Shift`}
 function qProgress(room){let r=state.rooms[room]||{done:0};let n=(ROOMQ[room]||[]).length;return [r.done||0,n]}function currentEvent(room){let done=(state.rooms[room]?.done||0),list=EVENTS[room]||[],ev=null;for(const e of list)if(done>=e.at)ev=e;return ev}
 function renderBoard(){document.getElementById('board').innerHTML=PATIENTS.map(p=>{let[d,n]=qProgress(p.room),ev=currentEvent(p.room),pct=n?Math.min(100,100*d/n):0;return `<article class="room ${d>=n&&n?'done':''} ${ev?'alert':''}" onclick="openRoom('${p.room}')"><div class="room-top"><span class="room-num">ROOM ${p.room}</span><span class="badge ${ev?'alert':''}">${ev?ev.time+' update':(d?'in progress':'new')}</span></div><div class="chief">${esc(p.display)}</div><div class="meta">${esc(p.age)}${p.hidden?' • diagnosis not revealed':' • '+esc(p.dx)}</div><div class="handoff">${esc(ev?ev.text:p.handoff)}</div><div class="meta">${d}/${n} room questions completed</div><div class="progress"><span style="width:${pct}%"></span></div></article>`}).join('')}
-function showOnly(id){['boardView','patientView','reviewView','medView'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==id))}function showBoard(){showOnly('boardView');renderBoard();updateStats()}function patientByRoom(r){return PATIENTS.find(p=>p.room===r)}
+function showOnly(id){['boardView','patientView','reviewView','matchView','medView','compareHubView','genericMatchView','abgLabView','cjmmCaseView'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==id))}function showBoard(){showOnly('boardView');renderBoard();updateStats()}function patientByRoom(r){return PATIENTS.find(p=>p.room===r)}
 function renderPatient(room){let p=patientByRoom(room),ev=currentEvent(room),revealed=(state.rooms[room]?.done||0)>=2||!p.hidden;document.getElementById('patientCard').innerHTML=`<div class="room-num">ROOM ${p.room}</div><h2>${esc(p.display)}</h2><div class="badge">${esc(p.age)}</div>${revealed?`<div class="badge" style="margin-left:5px">${esc(p.dx)}</div>`:''}<div class="kv"><b>Handoff</b><span>${esc(p.handoff)}</span><b>History</b><span>${esc(p.history)}</span><b>Symptoms</b><span>${esc(p.symptoms)}</span><b>Vitals</b><span>${esc(p.vitals)}</span><b>Labs/diagnostics</b><span>${esc(p.labs)}</span><b>Lines/tubes</b><span>${esc(p.lines)}</span><b>Medications</b><span>${esc(p.meds)}</span><b>Orders</b><span>${esc(p.orders)}</span><b>Safety</b><span>${esc(p.safety)}</span><b>Teaching</b><span>${esc(p.teaching)}</span></div>${ev?`<div class="event"><b>${ev.time} change:</b> ${esc(ev.text)}</div>`:''}`}
 function openRoom(room){currentRoom=room;reviewMode=false;if(!state.rooms[room])state.rooms[room]={done:0,correct:0,missed:0};currentDeck=ROOMQ[room]||[];qi=Math.min(state.rooms[room].done||0,Math.max(0,currentDeck.length-1));showOnly('patientView');renderPatient(room);renderQuestion();save()}
 function shuffleQuestion(q){q=JSON.parse(JSON.stringify(q));if(['order','sbar'].includes(q.type))return q;let pairs=q.opts.map((o,i)=>({o,correct:q.ans.includes(i)}));for(let i=pairs.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[pairs[i],pairs[j]]=[pairs[j],pairs[i]]}q.opts=pairs.map(x=>x.o);q.ans=pairs.map((x,i)=>x.correct?i:null).filter(x=>x!==null);return q}
@@ -30,5 +124,282 @@ function openReview(){showOnly('reviewView');let weak=Object.entries(state.weak)
 function startMissedReview(){let ids=new Set(state.missed),all=[...Object.values(ROOMQ).flat(),...FLOOR_WIDE,...ADV];currentDeck=all.filter(q=>ids.has(q.id||q.q));currentRoom=null;reviewMode=true;qi=0;showOnly('patientView');document.getElementById('patientCard').innerHTML='<div class="room-num">REVIEW MODE</div><h2>Missed Questions</h2><p>Answer positions are randomized again.</p>';renderQuestion()}
 function showMedRoster(){showOnly('medView');document.getElementById('medRoster').innerHTML=MEDS.map(m=>`<article class="room" style="cursor:default"><div class="chief">${esc(m.name)}</div><div class="meta"><b>${esc(m.cls)}</b></div><div class="handoff"><b>Why:</b> ${esc(m.purpose)}<br><br><b>Adverse:</b> ${esc(m.adverse)}<br><br><b>Assess:</b> ${esc(m.assess)}<br><br><b>Memory:</b> ${esc(m.memory)}</div></article>`).join('')}
 function startAdvanced(){currentRoom=null;reviewMode=false;currentDeck=ADV;qi=0;showOnly('patientView');document.getElementById('patientCard').innerHTML='<div class="room-num">1845 END-OF-SHIFT</div><h2>Advanced Challenge</h2><p>25 harder questions. Competing concerns, subtle trends, delegation, CJMM/AAPIE, medication safety, and SBAR.</p>';renderQuestion()}
+
+const COPD_MATCH=[
+{id:'cb1',text:'Daily productive cough with sputum for >3 months in 2 consecutive years',side:'bronchitis',why:'This is the lecture diagnostic criterion for chronic bronchitis.'},
+{id:'cb2',text:'Mucus hypersecretion from increased goblet cells/mucus glands',side:'bronchitis',why:'Chronic airway irritation increases mucus-producing cells, creating excessive sputum.'},
+{id:'cb3',text:'Bronchial walls become thickened and narrowed',side:'bronchitis',why:'The main structural problem is in the bronchi: chronic inflammation thickens and narrows the airway tubes.'},
+{id:'cb4',text:'Rhonchi and wheezing are commonly audible',side:'bronchitis',why:'Air moving through narrowed, mucus-filled bronchi produces coarse rhonchi and wheezing.'},
+{id:'cb5',text:'Cyanosis / “blue” appearance',side:'bronchitis',why:'The lecture associates chronic bronchitis with poorer oxygenation, so cyanosis is more prominent.'},
+{id:'cb6',text:'Often overweight/rotund with peripheral edema',side:'bronchitis',why:'The classic lecture phenotype describes a heavier body habitus and edema.'},
+{id:'cb7',text:'Elevated hemoglobin from chronic hypoxia',side:'bronchitis',why:'Chronic low oxygen stimulates increased RBC/hemoglobin production.'},
+{id:'cb8',text:'Lower PaO₂ with increased PaCO₂',side:'bronchitis',why:'Mucus obstruction and narrowed bronchi impair ventilation and oxygenation, promoting hypoxemia and CO₂ retention.'},
+{id:'em1',text:'Destruction of alveolar walls',side:'emphysema',why:'Emphysema primarily damages the alveoli—the gas-exchange units.'},
+{id:'em2',text:'Increased dead space / reduced gas-exchange surface',side:'emphysema',why:'Destroyed alveolar walls leave less functional surface for gas exchange.'},
+{id:'em3',text:'Barrel chest',side:'emphysema',why:'Chronic air trapping and hyperinflation increase the anterior-posterior chest diameter.'},
+{id:'em4',text:'Flattened diaphragm and hyperinflated lungs',side:'emphysema',why:'Trapped air keeps the lungs overexpanded, pushing the diaphragm downward and flattening it.'},
+{id:'em5',text:'Diminished breath sounds',side:'emphysema',why:'Destroyed alveoli and reduced effective airflow make breath sounds quieter.'},
+{id:'em6',text:'Very thin/frail appearance',side:'emphysema',why:'The intense work of breathing burns substantial energy, contributing to a thin/frail appearance.'},
+{id:'em7',text:'Minimal cyanosis / “pink” appearance',side:'emphysema',why:'The classic lecture phenotype describes better-maintained oxygenation than chronic bronchitis, especially earlier in disease.'},
+{id:'em8',text:'Pursed-lip breathing',side:'emphysema',why:'Pursed lips create back-pressure during exhalation, helping keep small airways open and empty trapped air.'}
+];
+let copdMatchState={},copdSelected=null;
+function openCOPDMatch(){showOnly('matchView');resetCOPDMatch()}
+function resetCOPDMatch(){
+ copdMatchState={};copdSelected=null;
+ let bank=[...COPD_MATCH];for(let i=bank.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[bank[i],bank[j]]=[bank[j],bank[i]]}
+ document.getElementById('matchBank').innerHTML=bank.map(x=>`<button class="match-chip" id="chip-${x.id}" onclick="event.stopPropagation();selectMatch('${x.id}')">${esc(x.text)}</button>`).join('');
+ document.getElementById('bronchitisBin').innerHTML='';document.getElementById('emphysemaBin').innerHTML='';
+ let f=document.getElementById('matchFeedback');f.className='feedback';f.innerHTML='';
+}
+function selectMatch(id){copdSelected=id;document.querySelectorAll('.match-chip').forEach(x=>x.classList.remove('active'));document.getElementById('chip-'+id)?.classList.add('active')}
+function placeMatch(side){
+ if(!copdSelected)return;copdMatchState[copdSelected]=side;const item=COPD_MATCH.find(x=>x.id===copdSelected);
+ document.getElementById('chip-'+copdSelected)?.remove();const div=document.createElement('div');div.className='match-item';div.id='placed-'+item.id;div.textContent=item.text;
+ div.onclick=(e)=>{e.stopPropagation();copdSelected=item.id;};document.getElementById(side==='bronchitis'?'bronchitisBin':'emphysemaBin').appendChild(div);copdSelected=null;
+}
+function gradeCOPDMatch(){
+ if(Object.keys(copdMatchState).length<COPD_MATCH.length){alert('Place all findings before checking your matches.');return}
+ let correct=0;COPD_MATCH.forEach(item=>{const el=document.getElementById('placed-'+item.id);const ok=copdMatchState[item.id]===item.side;if(ok)correct++;el.classList.add(ok?'good':'bad');el.innerHTML=`<b>${ok?'✓':'✗'} ${esc(item.text)}</b><div class="match-explain">${esc(item.why)}${ok?'':` <b>Correct side:</b> ${item.side==='bronchitis'?'Chronic Bronchitis':'Emphysema'}.`}</div>`;});
+ let f=document.getElementById('matchFeedback');f.className='feedback show';f.innerHTML=`<b>${correct}/${COPD_MATCH.length} correct</b><br><br>🫧 <b>Chronic Bronchitis = BRONCHI + MUCUS:</b> productive cough, mucus, rhonchi/wheeze, cyanosis, edema, chronic hypoxemia/CO₂ retention.<br><br>🎈 <b>Emphysema = ALVEOLI + AIR TRAPPING:</b> alveolar destruction, dead space, hyperinflation, barrel chest, diminished sounds, thin/frail appearance, pursed-lip breathing.`;
+}
+
+
+// ---------------- PERSONAL HISTORY / RESET ----------------
+function resetMyBoard(){
+ if(!confirm('Reset YOUR board on this browser? This clears your room progress, score, missed questions, weak topics, and shift time. It will not affect anyone else using the shared link.')) return;
+ localStorage.removeItem('oxygenFloorState');
+ state={rooms:{},correct:0,answered:0,missed:[],weak:{},advanced:{done:0,correct:0},shiftMinutes:0};
+ currentRoom=null;currentDeck=[];qi=0;currentQuestion=null;selected=[];reviewMode=false;
+ renderBoard();updateStats();showBoard();
+ alert('Your board has been reset on this browser.');
+}
+
+// ---------------- MATCHING CENTER ----------------
+const MATCH_ACTIVITIES=[
+ {id:'copd2',title:'COPD: Chronic Bronchitis vs Emphysema',intro:'Sort each cue by the dominant COPD phenotype.',zones:[
+   {id:'bronchitis',name:'🫧 Chronic Bronchitis — BRONCHI + MUCUS'},{id:'emphysema',name:'🎈 Emphysema — ALVEOLI + AIR TRAPPING'}],
+  items:[
+   ['Daily productive cough with sputum for >3 months in 2 consecutive years','bronchitis','Formal chronic-bronchitis criterion.'],
+   ['Mucus hypersecretion / goblet-cell increase','bronchitis','Chronic airway irritation increases mucus-producing cells.'],
+   ['Rhonchi and wheezing','bronchitis','Air moves through narrowed, secretion-filled bronchi.'],
+   ['Cyanosis / “blue” appearance','bronchitis','Chronic bronchitis is associated with poorer oxygenation in the classic lecture phenotype.'],
+   ['Peripheral edema','bronchitis','Classic chronic-bronchitis phenotype may develop edema/right-sided strain.'],
+   ['Alveolar wall destruction','emphysema','The gas-exchange units themselves are destroyed.'],
+   ['Increased dead space','emphysema','Destroyed alveolar walls reduce functional gas-exchange surface.'],
+   ['Barrel chest / hyperinflation','emphysema','Air trapping chronically overexpands the lungs.'],
+   ['Diminished breath sounds','emphysema','Less effective airflow through destroyed/hyperinflated lung tissue.'],
+   ['Thin/frail appearance + pursed-lip breathing','emphysema','High work of breathing burns energy; pursed lips help keep small airways open on exhalation.']]},
+ {id:'lungloc',title:'Where is the problem? Pneumonia vs Effusion vs Atelectasis',intro:'Match the finding to the location/mechanism.',zones:[
+   {id:'pna',name:'🦠 Pneumonia — INSIDE alveoli'},{id:'eff',name:'💧 Pleural Effusion — OUTSIDE lung'},{id:'atel',name:'🫁 Atelectasis — COLLAPSED alveoli'}],
+  items:[
+   ['Inflammatory exudate fills alveoli','pna','Pneumonia puts inflammatory material inside air spaces.'],
+   ['Purulent sputum + focal crackles/infiltrate','pna','Infection/inflammation inside the lung creates secretions and consolidation.'],
+   ['Fluid occupies pleural space','eff','The fluid is outside lung tissue between pleural layers.'],
+   ['Diminished breath sounds at dependent base from compression','eff','Pleural fluid compresses the lung and limits expansion.'],
+   ['Post-op shallow breathing / sedation risk','atel','Low expansion after surgery promotes alveolar collapse.'],
+   ['Incentive spirometer + cough/deep breathe + ambulation','atel','These recruit/re-expand alveoli.']]},
+ {id:'fluid',title:'Pleural Fluid: Transudate vs Exudate',intro:'Sort the cause/mechanism of pleural fluid.',zones:[
+   {id:'trans',name:'Transudate — pressure/volume problem'},{id:'exud',name:'Exudate — inflammation/permeability problem'}],
+  items:[
+   ['Heart failure / hydrostatic-pressure problem','trans','Pressure imbalance pushes low-protein fluid into pleural space.'],
+   ['Cirrhosis/nephrotic-type systemic fluid problem','trans','Oncotic/pressure imbalance favors transudative fluid.'],
+   ['Pneumonia/infection','exud','Inflammation increases capillary permeability.'],
+   ['Protein- and cell-rich cloudy fluid','exud','Inflammatory fluid contains more protein/cells.']]},
+ {id:'chest',title:'Chest Tube: Expected vs Air-Leak Finding',intro:'Match the chamber finding with its meaning.',zones:[
+   {id:'expected',name:'Expected / normal system behavior'},{id:'leak',name:'Abnormal — investigate air leak'}],
+  items:[
+   ['Gentle continuous bubbling in wet suction-control chamber','expected','This indicates suction is being applied in a wet-suction system.'],
+   ['Tidaling in the water-seal chamber with respirations','expected','Rise/fall with breathing is expected while the system is communicating with pleural pressure.'],
+   ['Continuous bubbling in water-seal chamber','leak','This usually suggests an air leak from patient or system.'],
+   ['New bubbling after repositioning','leak','Check patient, tubing connections, insertion site, and drainage system.']]},
+ {id:'asthmazone',title:'Asthma Action Plan: Green vs Yellow vs Red',intro:'Sort peak-flow and symptom patterns into the correct action zone.',zones:[
+   {id:'green',name:'🟢 Green — ≥80%'},{id:'yellow',name:'🟡 Yellow — 50–79%'},{id:'red',name:'🔴 Red — <50%'}],
+  items:[
+   ['No cough/wheeze; normal activity','green','Stable control. Continue controller plan.'],
+   ['Continue maintenance/controller medications','green','Green-zone management continues baseline therapy.'],
+   ['Increased cough, wheeze, chest tightness','yellow','Flare-up/caution symptoms.'],
+   ['Use quick-relief albuterol and continue maintenance plan','yellow','Yellow zone requires rescue therapy plus ongoing controller meds.'],
+   ['Peak flow 42% of personal best','red','<50% is red-zone danger.'],
+   ['Severe symptoms / poor response to rescue therapy','red','Red zone requires urgent escalation/emergency plan.']]},
+ {id:'devices',title:'Peak Flow Meter vs Incentive Spirometer',intro:'Match technique and purpose.',zones:[
+   {id:'pf',name:'Peak Flow Meter'},{id:'is',name:'Incentive Spirometer'}],
+  items:[
+   ['Hard and fast exhalation','pf','Measures maximal expiratory flow.'],
+   ['Used to determine asthma action-plan zone','pf','Compares current peak flow with personal best.'],
+   ['Slow, controlled deep inhalation','is','Promotes sustained inspiration and lung expansion.'],
+   ['Post-op lung expansion / atelectasis prevention','is','Recruits alveoli through deep inspiration.']]},
+ {id:'cfbody',title:'Cystic Fibrosis: Which body system?',intro:'Sort the effect of thick secretions by organ system.',zones:[
+   {id:'resp',name:'Respiratory'},{id:'digest',name:'Digestive / Pancreatic'},{id:'sweat',name:'Sweat glands'},{id:'repro',name:'Reproductive'}],
+  items:[
+   ['Thick mucus clogs bronchi; cough/wheeze/infection risk','resp','Airway mucus obstructs breathing and traps organisms.'],
+   ['Mucus plugging can contribute to atelectasis','resp','Obstructed bronchi reduce ventilation to distal alveoli.'],
+   ['Pancreatic insufficiency / poor nutrient absorption','digest','Blocked pancreatic ducts reduce digestive-enzyme delivery.'],
+   ['Poor growth / chronic diarrhea / steatorrhea','digest','Malabsorption follows pancreatic/digestive involvement.'],
+   ['Abnormally salty skin','sweat','Abnormal chloride transport affects sweat glands.'],
+   ['Fertility/reproductive effects','repro','CF affects reproductive structures/secretions.']]},
+ {id:'abgmatch',title:'ABG Pattern Match',intro:'No compensation: match the basic primary pattern.',zones:[
+   {id:'ra',name:'Respiratory Acidosis'},{id:'rk',name:'Respiratory Alkalosis'},{id:'ma',name:'Metabolic Acidosis'},{id:'mk',name:'Metabolic Alkalosis'}],
+  items:[
+   ['pH ↓ + PaCO₂ ↑','ra','Respiratory values move opposite.'],
+   ['COPD / hypoventilation / sedation','ra','Inadequate ventilation retains CO₂.'],
+   ['pH ↑ + PaCO₂ ↓','rk','Hyperventilation blows off CO₂.'],
+   ['Anxiety/pain/hypoxia with tachypnea','rk','Excess ventilation lowers CO₂.'],
+   ['pH ↓ + HCO₃⁻ ↓','ma','Metabolic values move in the same direction.'],
+   ['Diarrhea / renal failure / lactic acidosis','ma','Bicarbonate loss or acid accumulation drives acidosis.'],
+   ['pH ↑ + HCO₃⁻ ↑','mk','Metabolic values move in the same direction.'],
+   ['Vomiting / NG drainage / excess bicarbonate','mk','Loss of acid or gain of base drives alkalosis.']]}
+];
+let gmActivity=null,gmState={},gmSelected=null;
+
+function openCompareHub(){
+ showOnly('compareHubView');
+ document.getElementById('compareTopics').innerHTML=MATCH_ACTIVITIES.map(a=>`<article class="match-topic" onclick="startGenericMatch('${a.id}')"><h3>${esc(a.title)}</h3><p>${esc(a.intro)}</p></article>`).join('');
+}
+function startGenericMatch(id){
+ gmActivity=MATCH_ACTIVITIES.find(a=>a.id===id);gmState={};gmSelected=null;showOnly('genericMatchView');
+ document.getElementById('gmTitle').textContent=gmActivity.title;document.getElementById('gmIntro').textContent=gmActivity.intro;renderGenericMatch();
+}
+function renderGenericMatch(){
+ let items=gmActivity.items.map((x,i)=>({id:i,text:x[0],zone:x[1],why:x[2]})).filter(x=>gmState[x.id]===undefined);
+ for(let i=items.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[items[i],items[j]]=[items[j],items[i]]}
+ document.getElementById('gmBank').innerHTML=items.map(x=>`<button class="match-token ${gmSelected===x.id?'sel':''}" onclick="selectGM(${x.id})">${esc(x.text)}</button>`).join('');
+ document.getElementById('gmZones').innerHTML=gmActivity.zones.map(z=>`<div class="match-zone" onclick="placeGM('${z.id}')"><h3>${esc(z.name)}</h3><div>${Object.entries(gmState).filter(([k,v])=>v===z.id).map(([k])=>{let item=gmActivity.items[Number(k)];return `<div class="match-placed" id="gm-${k}">${esc(item[0])}</div>`}).join('')}</div></div>`).join('');
+}
+function selectGM(i){gmSelected=i;renderGenericMatch()}
+function placeGM(zone){if(gmSelected===null)return;gmState[gmSelected]=zone;gmSelected=null;renderGenericMatch()}
+function resetGenericMatch(){gmState={};gmSelected=null;renderGenericMatch();let f=document.getElementById('gmFeedback');f.className='feedback';f.innerHTML=''}
+function gradeGenericMatch(){
+ if(Object.keys(gmState).length<gmActivity.items.length){alert('Place all items before checking.');return}
+ let score=0;
+ gmActivity.items.forEach((it,i)=>{let el=document.getElementById('gm-'+i),ok=gmState[i]===it[1];if(ok)score++;if(el){el.classList.add(ok?'ok':'no');el.innerHTML=`<b>${ok?'✓':'✗'} ${esc(it[0])}</b><div class="match-explain">${esc(it[2])}${ok?'':` Correct: ${esc(gmActivity.zones.find(z=>z.id===it[1]).name)}.`}</div>`}});
+ let f=document.getElementById('gmFeedback');f.className='feedback show';f.innerHTML=`<b>${score}/${gmActivity.items.length} correct.</b> Review the explanation under every item before resetting.`;
+}
+
+// ---------------- ABG + MAP LAB ----------------
+const ABG_CASES=[
+ {label:'COPD exacerbation',pH:7.30,co2:58,hco3:22,po2:64,sbp:92,dbp:54,answer:'Respiratory acidosis',why:'pH is low and PaCO₂ is high. The COPD client is not ventilating effectively, so CO₂ is retained.',intervention:'Improve ventilation/oxygenation: upright position, assess airway/work of breathing, give ordered bronchodilator and oxygen, reassess; escalate if tiring or worsening.',mapWhy:'The low BP/MAP adds a circulation/perfusion concern, so reassess mentation, urine output, pulses, IV access, and cause of hypotension while supporting breathing.'},
+ {label:'Hyperventilation after pain/anxiety',pH:7.50,co2:30,hco3:24,po2:92,sbp:132,dbp:78,answer:'Respiratory alkalosis',why:'pH is high and PaCO₂ is low. The patient is blowing off too much CO₂.',intervention:'Find and treat the cause of hyperventilation (pain, hypoxia, fear, etc.), reassess breathing and neurologic symptoms. Do not treat the number alone.',mapWhy:'MAP is adequate, so the immediate issue is the cause of hyperventilation rather than perfusion support.'},
+ {label:'Diarrhea / bicarbonate loss',pH:7.28,co2:40,hco3:19,po2:94,sbp:104,dbp:62,answer:'Metabolic acidosis',why:'pH is low, PaCO₂ is normal, and HCO₃⁻ is low. The metabolic component matches the acidotic pH.',intervention:'Treat the cause and perfusion/volume problem: assess losses, hydration status, electrolytes, renal function, and give ordered fluids/electrolyte therapy.',mapWhy:'MAP is borderline-adequate; trend perfusion because ongoing fluid loss can lower circulating volume and MAP.'},
+ {label:'Prolonged vomiting / NG drainage',pH:7.52,co2:40,hco3:30,po2:88,sbp:118,dbp:70,answer:'Metabolic alkalosis',why:'pH is high, PaCO₂ is normal, and HCO₃⁻ is high. Acid loss leaves the patient relatively alkalotic.',intervention:'Treat the cause; assess volume, chloride and potassium losses, replace ordered fluids/electrolytes, and reassess rhythm/neuromuscular findings.',mapWhy:'MAP is adequate; treatment is driven more by volume/electrolyte losses and the cause of alkalosis.'},
+ {label:'Pneumonia with fatigue',pH:7.32,co2:50,hco3:22,po2:75,sbp:128,dbp:88,answer:'Respiratory acidosis',why:'pH is low with elevated PaCO₂. PaO₂ is also low, showing a separate oxygenation problem.',intervention:'Support both ventilation and oxygenation: HOB up, oxygen as ordered, assess fatigue/air movement, pulmonary hygiene and disease treatment, reassess ABG/SpO₂/mental status.',mapWhy:'MAP is adequate, so respiratory gas exchange is the immediate physiologic driver.'},
+ {label:'Sedation / hypoventilation',pH:7.29,co2:55,hco3:24,po2:72,sbp:86,dbp:48,answer:'Respiratory acidosis',why:'Low pH + high CO₂ means respiratory acidosis from inadequate ventilation; low PaO₂ shows hypoxemia.',intervention:'Airway/breathing first: stimulate/assess, position, oxygen/ventilatory support as ordered, hold contributing sedative/opioid and escalate/reversal per order/protocol.',mapWhy:'MAP is low, so circulation is also threatened. After immediate airway/breathing support, address perfusion with IV access and cause-directed treatment.'}
+];
+let abgNow=null,abgChoice=null,abgInterventionChoice=null;
+
+function openABGLab(){showOnly('abgLabView');newABGCase()}
+function calcMAP(s,d){return (Number(s)+2*Number(d))/3}
+function classifyABG(c){
+ if(c.pH<7.35 && c.co2>45) return 'Respiratory acidosis';
+ if(c.pH>7.45 && c.co2<35) return 'Respiratory alkalosis';
+ if(c.pH<7.35 && c.hco3<22) return 'Metabolic acidosis';
+ if(c.pH>7.45 && c.hco3>26) return 'Metabolic alkalosis';
+ return 'Normal / does not fit basic uncompensated pattern';
+}
+function newABGCase(){
+ abgNow=ABG_CASES[Math.floor(Math.random()*ABG_CASES.length)];abgChoice=null;abgInterventionChoice=null;
+ let map=calcMAP(abgNow.sbp,abgNow.dbp);
+ document.getElementById('abgCaseArea').innerHTML=`
+ <h3 style="margin-top:16px">${esc(abgNow.label)}</h3>
+ <div class="lab-grid">
+  <div class="lab-value"><small>pH • normal 7.35–7.45</small><div class="big">${abgNow.pH.toFixed(2)}</div></div>
+  <div class="lab-value"><small>PaCO₂ • normal 35–45</small><div class="big">${abgNow.co2}</div></div>
+  <div class="lab-value"><small>HCO₃⁻ • normal 22–26</small><div class="big">${abgNow.hco3}</div></div>
+  <div class="lab-value"><small>PaO₂ • course goal >80 / about 80–100</small><div class="big">${abgNow.po2}</div></div>
+ </div>
+ <div class="step-card"><h3>1. What does each number tell you?</h3>
+ <p><b>pH</b> = acid vs alkaline. <b>PaCO₂</b> = ventilation/lungs. <b>HCO₃⁻</b> = metabolic/kidney-buffer side. <b>PaO₂</b> = oxygen dissolved in arterial blood/oxygenation.</p></div>
+ <div class="step-card"><h3>2. Interpret the ABG</h3><div id="abgChoices">${['Respiratory acidosis','Respiratory alkalosis','Metabolic acidosis','Metabolic alkalosis'].map(x=>`<button class="mini-choice" onclick="pickABG('${x}',this)">${x}</button>`).join('')}</div></div>
+ <div class="step-card"><h3>3. Calculate MAP</h3><div class="formula">MAP ≈ (SBP + 2 × DBP) ÷ 3</div>
+ <div class="calc-row"><label>SBP<input id="mapSBP" type="number" value="${abgNow.sbp}"></label><label>DBP<input id="mapDBP" type="number" value="${abgNow.dbp}"></label><button class="btn" onclick="checkMAP()">Calculate</button></div><div id="mapResult" style="margin-top:10px"></div></div>
+ <div class="step-card"><h3>4. Which treatment direction fits the physiology?</h3>
+ ${[
+   'Support/improve ventilation and oxygenation when CO₂ is high and/or PaO₂ is low; treat the respiratory cause.',
+   'Treat the cause of excessive ventilation when CO₂ is low; reassess for hypoxia, pain, fear, or other triggers.',
+   'Treat the metabolic cause and volume/electrolyte problem when HCO₃⁻ is abnormal.',
+   'Ignore the patient and treat only the ABG number.'
+ ].map((x,i)=>`<button class="mini-choice" onclick="pickABGIntervention(${i},this)">${esc(x)}</button>`).join('')}
+ </div>
+ <button class="btn" onclick="gradeABGLab()">Explain this case</button>
+ <div id="abgFeedback" class="feedback"></div>`;
+}
+function pickABG(x,b){abgChoice=x;document.querySelectorAll('#abgChoices .mini-choice').forEach(e=>e.classList.remove('pick'));b.classList.add('pick')}
+function pickABGIntervention(i,b){abgInterventionChoice=i;b.parentElement.querySelectorAll('.mini-choice').forEach(e=>e.classList.remove('pick'));b.classList.add('pick')}
+function checkMAP(){
+ let s=Number(document.getElementById('mapSBP').value),d=Number(document.getElementById('mapDBP').value),m=calcMAP(s,d);
+ let meaning=m<65?'<b>LOW:</b> concern for inadequate organ perfusion. Assess the patient and cause; support circulation as indicated.':m<=100?'<b>Generally adequate/typical adult range:</b> interpret with the patient and trend.':'<b>Elevated:</b> not automatically an emergency; assess context, BP trend, symptoms, and cause.';
+ document.getElementById('mapResult').innerHTML=`MAP = <b>${m.toFixed(0)} mmHg</b> — ${meaning}`;
+}
+function gradeABGLab(){
+ let actual=classifyABG(abgNow),m=calcMAP(abgNow.sbp,abgNow.dbp);
+ let direction = actual==='Respiratory acidosis'?0:actual==='Respiratory alkalosis'?1:2;
+ let ok1=abgChoice===actual,ok2=abgInterventionChoice===direction;
+ let oxygen=abgNow.po2<80?`PaO₂ ${abgNow.po2} is low, so oxygenation also needs attention.`:`PaO₂ ${abgNow.po2} is acceptable for this exercise, so oxygenation is not the main abnormality.`;
+ let f=document.getElementById('abgFeedback');f.className='feedback show';
+ f.innerHTML=`<b>${ok1?'✓':'✗'} ABG:</b> ${actual}. ${esc(abgNow.why)}<br><br><b>Numbers:</b> ${oxygen}<br><br><b>${ok2?'✓':'✗'} Intervention direction:</b> ${esc(abgNow.intervention)}<br><br><b>MAP:</b> (${abgNow.sbp} + 2×${abgNow.dbp}) ÷ 3 = <b>${m.toFixed(0)} mmHg</b>. ${esc(abgNow.mapWhy)}<br><br><b>Connect the dots:</b> ABG tells you ventilation/acid-base + oxygenation; MAP helps you decide whether circulation/perfusion is also becoming a priority. Treat the patient and the cause, not just the number.`;
+}
+
+// ---------------- HOMEWORK-STYLE CJMM CASE LAB ----------------
+const CJMM_CASES=[
+ {id:'pna',title:'Pneumonia — gas exchange',data:'68-year-old with fever, RR 28, SpO₂ 90% on 2 L NC, WBC 15.8K, RLL crackles, yellow-green sputum, ABG 7.32 / 50 / 75 / 22, CXR RLL infiltrate.',
+ steps:[
+  ['Recognize Cues','Which cues are most important?',['SpO₂ 90% on O₂ + RR 28 + ABG abnormalities','Only the cholesterol history','Only the age','Only the appetite'],0,'The respiratory cues directly show current gas-exchange/ventilation compromise.'],
+  ['Analyze Cues','What do the cues mean together?',['Alveolar inflammation/exudate is impairing ventilation and diffusion','The kidneys are the primary problem','The client is overoxygenated','There is no physiologic problem'],0,'Pneumonia fills alveoli with inflammatory material, reducing effective gas exchange.'],
+  ['Prioritize Hypotheses','What is the priority problem?',['Impaired gas exchange','Knowledge deficit','Risk for constipation','Disturbed sleep'],0,'An actual breathing problem outranks education and comfort.'],
+  ['Generate Solutions','Which solution set best fits?',['Oxygen support as ordered + upright position + pulmonary hygiene + treat infection','Bed rest and suppress every cough','Hold all respiratory treatment','Nutrition teaching only'],0,'Support oxygenation and recruit/clear the lung while treating the infection.'],
+  ['Take Action','What should the nurse do first if SpO₂ falls to 84%?',['Raise HOB, assess breathing, support oxygenation, then escalate based on response','Document first','Wait for next scheduled vitals','Give discharge teaching'],0,'An acute breathing change requires immediate ABC-focused action.'],
+  ['Evaluate Outcomes','Which finding best shows improvement?',['SpO₂ rises, RR/work of breathing improve, client speaks/ambulates better','WBC unchanged after 5 minutes','Client says lunch tastes better','Charting is complete'],0,'Evaluation measures whether the respiratory problem actually improved.']]},
+ {id:'copd',title:'COPD — ventilation + medication',data:'72-year-old with COPD on 3 L NC: SpO₂ 89%, RR 26, accessory muscles, pursed lips, wheeze, diminished sounds, ABG 7.30 / 58 / 64 / 22.',
+ steps:[
+  ['Recognize Cues','Which cue most directly shows poor ventilation?',['PaCO₂ 58','Barrel chest','Clubbing','Reduced appetite'],0,'PaCO₂ directly reflects ventilation; high CO₂ means inadequate exhalation/ventilation.'],
+  ['Analyze Cues','What is happening physiologically?',['Expiratory airflow limitation causes air trapping and CO₂ retention','The patient is hyperventilating and losing CO₂','Pleural fluid is the only problem','The kidneys are causing wheeze'],0,'COPD limits expiratory flow; trapped air and poor ventilation raise CO₂.'],
+  ['Prioritize Hypotheses','Priority problem?',['Impaired ventilation/gas exchange','Nutrition only','Knowledge deficit','Constipation'],0,'ABCs and abnormal ABG make respiratory function the priority.'],
+  ['Generate Solutions','Best plan?',['Upright position + ordered oxygen + rapid bronchodilator + steroid + reassessment','Stop all oxygen','Give cough suppressant regardless of secretions','Delay treatment until next shift'],0,'The plan supports airflow, oxygenation, and airway inflammation.'],
+  ['Take Action','Which medication directly targets acute bronchospasm?',['Albuterol','Tiotropium only','Budesonide only','Pancrelipase'],0,'Albuterol is the rapid bronchodilator for acute bronchospasm.'],
+  ['Evaluate Outcomes','Which trend shows treatment worked?',['RR/work of breathing decrease, SpO₂ and speech improve','HR rises with no respiratory improvement','PaCO₂ climbs and LOC decreases','Silent chest develops'],0,'Improved airflow, oxygenation, and function demonstrate effectiveness.']]},
+ {id:'pe',title:'Pulmonary Embolism — perfusion',data:'56-year-old two weeks after knee surgery: sudden dyspnea, pleuritic pain, HR 118, RR 28, BP 98/60, SpO₂ 88% RA; CT confirms PE.',
+ steps:[
+  ['Recognize Cues','Which pattern matters most?',['Recent surgery + sudden dyspnea + tachycardia/hypoxemia','Long-standing HTN only','Appetite change','Chronic dry skin'],0,'A provoking clot risk plus sudden respiratory symptoms is classic for PE.'],
+  ['Analyze Cues','What is the pathophysiology?',['Perfusion is blocked to ventilated alveoli → V/Q mismatch/dead space','Alveoli fill with mucus first','Bronchospasm is the primary cause','Bicarbonate causes the clot'],0,'PE is fundamentally a pulmonary perfusion obstruction.'],
+  ['Prioritize Hypotheses','Greatest concern now?',['Impaired oxygenation/perfusion with risk of hemodynamic deterioration','Knowledge deficit','Constipation','Nutrition'],0,'Breathing and circulation are both threatened.'],
+  ['Generate Solutions','Which plan fits?',['Oxygen/support + monitoring + IV access + anticoagulation as ordered','Suppress respirations','Give pancrelipase','Delay anticoagulation teaching until after discharge only'],0,'Support oxygenation and prevent clot extension while watching perfusion.'],
+  ['Take Action','BP trends to 92/54 and client becomes lightheaded. First direction?',['Support ABCs, oxygen, rapid reassessment/escalation, maintain IV access','Document and wait','Ambulate client','Give oral fluids only and leave'],0,'New hypotension adds a circulation/perfusion threat.'],
+  ['Evaluate Outcomes','Best evidence of improvement?',['SpO₂ and BP improve, HR/RR trend down, dizziness resolves','D-dimer remains positive immediately','Client remains tachycardic and hypotensive','New confusion develops'],0,'Improved oxygenation and perfusion are the meaningful outcomes.']]},
+ {id:'cf',title:'Cystic Fibrosis — airway clearance',data:'9-year-old with CF: thick green sputum, coarse crackles/rhonchi, decreased air movement, accessory muscles, nasal flaring, SpO₂ 91%, WBC 14.2K, poor weight gain.',
+ steps:[
+  ['Recognize Cues','Which cues point to the immediate respiratory problem?',['Thick sputum + rhonchi + decreased air movement + increased work of breathing','Low BMI only','Family history only','Age only'],0,'The airway findings show mucus obstruction and increased work of breathing.'],
+  ['Analyze Cues','What connects the findings?',['CFTR dysfunction → dehydrated sticky mucus → obstruction/infection','A pulmonary clot is blocking perfusion','The pleural space is full of transudate','The kidneys create the mucus'],0,'Thick mucus obstructs bronchi and traps bacteria.'],
+  ['Prioritize Hypotheses','Priority problem?',['Ineffective airway clearance','Knowledge deficit','Altered nutrition only','Sleep pattern'],0,'Airway clearance is the immediate mechanism driving breathing difficulty.'],
+  ['Generate Solutions','Which interventions fit?',['CPT + dornase + hydration as appropriate + bronchodilator/antibiotic as ordered','Suppress all productive cough','Bed rest without airway therapy','Stop pancreatic enzymes'],0,'The goal is to open, thin, and move secretions while treating infection.'],
+  ['Take Action','Which action directly mobilizes secretions?',['Chest physiotherapy/airway clearance','Restrict fluids routinely','Give warfarin','Keep child flat'],0,'CPT physically mobilizes thick secretions.'],
+  ['Evaluate Outcomes','What shows airway-clearance therapy worked?',['Sputum easier to expectorate + better air movement + SpO₂ improves','BMI changes within 5 minutes','WBC doubles','Accessory muscle use worsens'],0,'The best evaluation measure is improvement in the problem targeted by the intervention.']]}
+];
+let cjmmCase=null,cjmmStep=0,cjmmScore=0;
+
+function openCJMMCases(){
+ showOnly('cjmmCaseView');cjmmCase=null;cjmmStep=0;cjmmScore=0;
+ document.getElementById('cjmmTitle').textContent='Choose a homework-style patient';
+ document.getElementById('cjmmArea').innerHTML=`<div class="feature-grid">${CJMM_CASES.map(c=>`<article class="feature-card" onclick="startCJMMCase('${c.id}')"><h3>${esc(c.title)}</h3><p>${esc(c.data)}</p></article>`).join('')}</div>`;
+}
+function startCJMMCase(id){cjmmCase=CJMM_CASES.find(c=>c.id===id);cjmmStep=0;cjmmScore=0;document.getElementById('cjmmTitle').textContent=cjmmCase.title;renderCJMMStep()}
+function renderCJMMStep(){
+ let s=cjmmCase.steps[cjmmStep];
+ document.getElementById('cjmmArea').innerHTML=`<div class="scenario">${esc(cjmmCase.data)}</div><div class="step-card"><div class="qtag">${cjmmStep+1}/6 • ${esc(s[0])}</div><h3 style="margin-top:10px">${esc(s[1])}</h3>${s[2].map((o,i)=>`<button class="mini-choice" onclick="answerCJMMStep(${i},this)">${esc(o)}</button>`).join('')}<div id="cjmmExplain"></div></div>`;
+}
+function answerCJMMStep(i,b){
+ let s=cjmmCase.steps[cjmmStep],ok=i===s[3];if(ok)cjmmScore++;
+ b.parentElement.querySelectorAll('.mini-choice').forEach((x,j)=>{x.disabled=true;if(j===s[3])x.classList.add('ok');else if(j===i)x.classList.add('no')});
+ document.getElementById('cjmmExplain').innerHTML=`<div class="feedback show"><b>${ok?'✓ Correct':'✗ Not quite'}</b><br>${esc(s[4])}<br><br><b>CJMM meaning:</b> ${esc(CJMM_STAGE_HELP[s[0]]||'Use the cue → meaning → priority → plan → action → reassessment sequence.')}</div><button class="btn" style="margin-top:10px" onclick="nextCJMMStep()">${cjmmStep===5?'Finish case':'Next CJMM step →'}</button>`;
+}
+const CJMM_STAGE_HELP={
+ 'Recognize Cues':'FIND IT: identify the data that matters; do not explain it yet.',
+ 'Analyze Cues':'CONNECT IT: explain what the cues mean together and how they relate to pathophysiology.',
+ 'Prioritize Hypotheses':'RANK IT: decide which problem is most urgent/likely using ABCs, acute vs chronic, actual vs risk.',
+ 'Generate Solutions':'PLAN IT: identify appropriate interventions that directly address the prioritized problem.',
+ 'Take Action':'DO IT: select the safest highest-priority action now.',
+ 'Evaluate Outcomes':'DID IT WORK?: compare new findings with baseline and the desired outcome.'
+};
+function nextCJMMStep(){if(cjmmStep<5){cjmmStep++;renderCJMMStep()}else{document.getElementById('cjmmArea').innerHTML=`<div class="feedback show"><h3>Case complete: ${cjmmScore}/6</h3><p>Run it again until you can verbalize the chain without guessing:</p><p><b>Recognize → Analyze → Prioritize → Generate → Take Action → Evaluate</b></p></div><button class="btn" onclick="openCJMMCases()">Choose another case</button>`}}
+
 renderBoard();updateStats();
 </script></body></html>
